@@ -1,0 +1,10 @@
+risk_agent:          {model: gemini-2.5-flash, temperature: 0.0}
+verification_agent:  {model: gemini-2.5-flash, temperature: 0.0}
+peer_review_agent:   {model: gemini-2.5-flash, temperature: 0.2}
+decision_agent:      {model: gemini-2.5-flash, temperature: 0.0}
+extraction_agent:    {model: gemini-2.5-flash, temperature: 0.0}
+translation_agent:   {model: gemini-2.5-flash, temperature: 0.0}
+rag_augmentation_agent: {model: gemini-2.5-flash-lite, temperature: 0.2}
+rag_generation_agent:   {model: gemini-2.5-flash, temperature: 0.1}
+rag_reflection_agent:   {model: gemini-2.5-flash-lite, temperature: 0.0}
+embeddings: {model: gemini-embedding-001, chunk_size: 256, chunk_overlap: 64, top_k: 5}

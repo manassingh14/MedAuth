@@ -1,0 +1,53 @@
+mandatory_documents:
+  - pa_request_form
+  - clinical_notes
+  - physician_order
+  - insurance_card
+  - lab_results
+  - imaging_report
+  - referral_letter
+  - photo_id
+
+required_case_fields:
+  - patient_id
+  - member_id
+  - diagnosis_code
+  - procedure_code
+  - requested_service
+
+crosswalk:
+  M54.16: ["72148", "97110"]
+  M17.11: ["27447", "73721"]
+  E11.9:  ["83036", "95251"]
+
+duplicate_window_days: 90
+
+risk_tiers:
+  low:    {max_score: 0.30}
+  medium: {max_score: 0.60}
+  high:   {max_score: 1.00}
+
+lab_reference_ranges:
+  HbA1c:      {low: 4.0,  high: 5.6, unit: "%", tolerance_pct: 5}
+  Creatinine: {low: 0.6,  high: 1.3, unit: "mg/dL", tolerance_pct: 5}
+  CRP:        {low: 0.0,  high: 10.0, unit: "mg/L", tolerance_pct: 5}
+
+human_review:
+  confidence_threshold: 0.80
+  adverse_decisions: [DENIED, PARTIALLY_APPROVED, REQUIRES_PEER_REVIEW]
+
+policy_rules:
+  general:
+    - {rule_id: G1, rule_text: "Member must have active insurance coverage on the date of request."}
+    - {rule_id: G2, rule_text: "Diagnosis and procedure codes must be present and form an accepted ICD-10/CPT pairing."}
+    - {rule_id: G3, rule_text: "Requesting provider must be verified and not sanctioned."}
+    - {rule_id: G4, rule_text: "Request must not duplicate a prior request for the same procedure within the duplicate window."}
+  by_procedure:
+    "72148":
+      - {rule_id: P72148-1, rule_text: "Lumbar MRI requires documented conservative therapy of at least 6 weeks."}
+      - {rule_id: P72148-2, rule_text: "Clinical notes must document neurological symptoms or red-flag findings."}
+    "27447":
+      - {rule_id: P27447-1, rule_text: "Total knee arthroplasty requires imaging evidence of advanced joint disease."}
+      - {rule_id: P27447-2, rule_text: "Documented failure of non-surgical treatment for at least 3 months."}
+    "83036":
+      - {rule_id: P83036-1, rule_text: "HbA1c testing is covered for diabetes monitoring at most once every 90 days."}

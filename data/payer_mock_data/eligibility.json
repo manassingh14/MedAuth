@@ -1,0 +1,5 @@
+{
+  "MBR-1001": {"active": true,  "plan_name": "MedCore Gold PPO", "coverage_pct": 80, "covered_services": ["72148","97110","27447","73721","83036"]},
+  "MBR-1002": {"active": true,  "plan_name": "MedCore Silver HMO", "coverage_pct": 70, "covered_services": ["83036","95251"]},
+  "MBR-1003": {"active": false, "plan_name": "MedCore Bronze", "coverage_pct": 0, "covered_services": []}
+}

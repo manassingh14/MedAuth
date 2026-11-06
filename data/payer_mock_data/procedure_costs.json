@@ -1,0 +1,8 @@
+{
+  "72148": {"description": "MRI lumbar spine w/o contrast", "cost": 1200.00},
+  "27447": {"description": "Total knee arthroplasty", "cost": 32000.00},
+  "83036": {"description": "Hemoglobin A1c", "cost": 45.00},
+  "97110": {"description": "Therapeutic exercise", "cost": 120.00},
+  "73721": {"description": "MRI knee w/o contrast", "cost": 1100.00},
+  "95251": {"description": "Continuous glucose monitoring analysis", "cost": 210.00}
+}

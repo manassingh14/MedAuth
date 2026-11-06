@@ -1,0 +1,28 @@
+# Secrets
+.env
+
+# Virtual environments (covers .venv, .venv5, etc.)
+.venv*/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Generated output
+reports/
+audit/
+chroma/
+*.log
+
+# Tools and editors
+.pytest_cache/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

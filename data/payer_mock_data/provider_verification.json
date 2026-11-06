@@ -1,0 +1,5 @@
+{
+  "1234567893": {"name": "Dr. Anita Rao",   "verified": true,  "sanctioned": false},
+  "1098765432": {"name": "Dr. Mark Doyle",  "verified": true,  "sanctioned": false},
+  "1555555555": {"name": "Dr. Sam Fake",    "verified": false, "sanctioned": true}
+}
